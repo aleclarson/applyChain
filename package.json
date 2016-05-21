@@ -1,0 +1,13 @@
+{
+  "name": "applyChain",
+  "version": "1.0.0",
+  "main": "js/src/applyChain",
+  "lotus": {
+    "plugins": [
+      "lotus-coffee"
+    ]
+  },
+  "dependencies": {
+    "assertType": "aleclarson/assertType#1.0.0"
+  }
+}
