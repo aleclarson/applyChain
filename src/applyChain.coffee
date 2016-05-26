@@ -1,17 +1,23 @@
 
 assertType = require "assertType"
 
-module.exports = (callbacks, scope, args) ->
+module.exports = (callbacks, context, args) ->
 
   assertType callbacks, Array
   return if not callbacks.length
 
-  if args
+  index = 0
+
+  if args and args.length
     assertType args, Array
-    for callback in callbacks
-      callback.apply scope, args
+    loop
+      callback = callbacks[index++]
+      return if not callback
+      callback.apply context, args
     return
 
-  for callback in callbacks
-    callback.call scope
+  loop
+    callback = callbacks[index++]
+    return if not callback
+    callback.call context
   return
