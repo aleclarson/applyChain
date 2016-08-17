@@ -29,4 +29,4 @@ module.exports = function(callbacks, context, args) {
   }
 };
 
-//# sourceMappingURL=../../map/src/applyChain.map
+//# sourceMappingURL=map/applyChain.map
