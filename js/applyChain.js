@@ -10,13 +10,16 @@ module.exports = function(callbacks, context, args) {
   }
   index = 0;
   if (args && args.length) {
-    assertType(args, Array);
     while (true) {
       callback = callbacks[index++];
       if (!callback) {
         return;
       }
-      callback.apply(context, args);
+      if (callback.length) {
+        callback.apply(context, args);
+      } else {
+        callback.call(context);
+      }
     }
     return;
   }

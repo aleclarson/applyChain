@@ -9,11 +9,12 @@ module.exports = (callbacks, context, args) ->
   index = 0
 
   if args and args.length
-    assertType args, Array
     loop
       callback = callbacks[index++]
       return if not callback
-      callback.apply context, args
+      if callback.length
+        callback.apply context, args
+      else callback.call context
     return
 
   loop
