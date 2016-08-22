@@ -1,7 +1,7 @@
 
 assertType = require "assertType"
 
-module.exports = (callbacks, context, args) ->
+applyChain = (callbacks, context, args) ->
 
   assertType callbacks, Array
   return if not callbacks.length
@@ -22,3 +22,5 @@ module.exports = (callbacks, context, args) ->
     return if not callback
     callback.call context
   return
+
+module.exports = applyChain

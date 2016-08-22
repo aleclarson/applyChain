@@ -1,8 +1,8 @@
-var assertType;
+var applyChain, assertType;
 
 assertType = require("assertType");
 
-module.exports = function(callbacks, context, args) {
+applyChain = function(callbacks, context, args) {
   var callback, index;
   assertType(callbacks, Array);
   if (!callbacks.length) {
@@ -31,5 +31,7 @@ module.exports = function(callbacks, context, args) {
     callback.call(context);
   }
 };
+
+module.exports = applyChain;
 
 //# sourceMappingURL=map/applyChain.map
