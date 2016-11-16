@@ -10,6 +10,6 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "assertType": "aleclarson/assertType#2.0.0"
+    "assertType": "aleclarson/assertType#2.0.1"
   }
 }
