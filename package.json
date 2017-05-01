@@ -1,0 +1,8 @@
+{
+  "name": "applyChain",
+  "version": "1.0.2",
+  "main": "js/applyChain",
+  "dependencies": {
+    "assertType": "aleclarson/assertType#2.0.2"
+  }
+}
